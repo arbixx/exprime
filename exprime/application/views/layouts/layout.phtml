@@ -1,0 +1,24 @@
+<html>
+<head>
+<?php echo $this->doctype("XHTML1_TRANSITIONAL"), PHP_EOL; ?>
+<base href="http://<?php echo $_SERVER['SERVER_NAME'] . $this->baseUrl(); ?>/" />
+<?php
+	echo $this->headMeta()
+					->setHttpEquiv('Content-Type','text/html')
+					->setName('Viewport', 'width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0');
+	echo $this->headTitle( $this->pageTitle );
+	echo $this->headStyle()->appendStyle('@import "http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css";');				  
+	echo $this->headScript()
+					->appendFile('http://code.jquery.com/jquery-1.7.1.min.js')
+					->appendFile('http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js');
+	
+	
+	echo PHP_EOL;
+	?>
+</head>
+<body>
+<?php 
+	echo $this->layout()->content;
+?>				
+</body>
+</html>

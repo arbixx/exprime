@@ -1,0 +1,46 @@
+<div data-role='page'>
+<div data-role='header' data-position='fixed'>
+	<h1>eX' | <?php echo $this->pageTitle; ?></h1>
+	<a href="#popup" data-icon='gear' class="ui-btn-right" data-iconpos="notext"></a>
+</div>
+<div data-role='content'>
+	<h1>Welcome to eX' ...</h1>
+	
+	<a href='#popup' data-role='button' data-inline='true' data-rel='dialog'>Test Popup</a><br/><BR/>
+	<div id="more-information">
+		<p>
+	    	<a href="http://framework.zend.com/" data-role='button' data-inline='true'>Zend Framework Website</a> |
+	        <a href="http://framework.zend.com/manual/en/" data-role='button' data-inline='true'>Zend Framework Manual</a>
+	    </p>
+	</div>
+</div>
+
+<div data-role='footer'>
+	<div>eX' - Footer</div><br/>
+	<?php echo "<div>";
+	echo "<b>DEBUG START</b><br/>";
+	//echo "APPLICATION_PATH=".APPLICATION_PATH."<br/>";
+	//echo "APPLICATION_ENV=".APPLICATION_ENV."<br/>";
+	echo "<b>DEBUG END</b><br/>";
+	echo "</div>";
+	?>
+</div>
+</div>
+
+<!-- #popup -->
+<div data-role="dialog" id="popup">
+
+	<div data-role="header" data-theme="e">
+		<h1>Dialog</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">	
+		<h2>Popup</h2>
+		<p>I have an id of "popup" on my page container and only look like a dialog because the link to me had a <code>data-rel="dialog"</code> attribute which gives me this inset look and a <code>data-transition="pop"</code> attribute to change the transition to pop. Without this, I'd be styled as a normal page.</p>		
+		<p><a href="#one" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back to page "one"</a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page popup -->
